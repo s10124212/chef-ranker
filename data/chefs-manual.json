@@ -1,0 +1,1383 @@
+[
+  {
+    "name": "Alain Ducasse",
+    "city": "Paris",
+    "country": "France",
+    "currentRestaurant": "Alain Ducasse au Plaza Athénée",
+    "cuisineSpecialties": ["French", "Mediterranean", "Haute Cuisine"],
+    "yearsExperience": 45,
+    "bio": "Monégasque chef who holds the most Michelin stars in the world across his restaurant empire. Pioneer of naturalité cuisine emphasizing cereals, vegetables, and fish.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 1990 },
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 1998 },
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2005 },
+      { "type": "OTHER", "detail": "Légion d'honneur", "year": 2008 }
+    ],
+    "career": [
+      { "role": "Head Chef", "restaurant": "Le Louis XV", "city": "Monte Carlo", "startYear": 1987, "isCurrent": true },
+      { "role": "Chef-Owner", "restaurant": "Alain Ducasse au Plaza Athénée", "city": "Paris", "startYear": 2000, "isCurrent": true },
+      { "role": "Chef-Owner", "restaurant": "Rivea", "city": "London", "startYear": 2014, "endYear": 2019 }
+    ],
+    "recognitions": [
+      { "title": "Most Michelin Stars Held by a Single Chef", "category": "MEDIA", "year": 2005 },
+      { "title": "Culinary Institute of America Leadership Award", "category": "SPEAKING", "year": 2007 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 650000 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 15 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED", "detail": "Trained many top chefs including Jean-François Piège", "relatedChef": "Jean-François Piège" }
+    ]
+  },
+  {
+    "name": "Thomas Keller",
+    "city": "Yountville",
+    "country": "United States",
+    "currentRestaurant": "The French Laundry",
+    "cuisineSpecialties": ["French", "American", "Haute Cuisine"],
+    "yearsExperience": 45,
+    "bio": "The only American chef to hold simultaneous three-star Michelin ratings for two restaurants. Known for exacting standards and classical technique.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2006 },
+      { "type": "JAMES_BEARD", "detail": "Outstanding Chef", "year": 1997 },
+      { "type": "JAMES_BEARD", "detail": "Best Chef California", "year": 1996 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in the World - The French Laundry", "year": 2003 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "The French Laundry", "city": "Yountville", "startYear": 1994, "isCurrent": true },
+      { "role": "Chef-Owner", "restaurant": "Per Se", "city": "New York", "startYear": 2004, "isCurrent": true },
+      { "role": "Chef-Owner", "restaurant": "Bouchon Bakery", "city": "Yountville", "startYear": 2003, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "The French Laundry Cookbook - Bestseller", "category": "PUBLICATION", "year": 1999 },
+      { "title": "Culinary Institute of America Hall of Fame", "category": "OTHER", "year": 2012 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 500000 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 6 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED", "detail": "Trained Grant Achatz and Corey Lee", "relatedChef": "Grant Achatz" },
+      { "type": "MENTORED", "detail": "Trained Corey Lee of Benu", "relatedChef": "Corey Lee" }
+    ]
+  },
+  {
+    "name": "Massimo Bottura",
+    "city": "Modena",
+    "country": "Italy",
+    "currentRestaurant": "Osteria Francescana",
+    "cuisineSpecialties": ["Italian", "Contemporary Italian", "Avant-Garde"],
+    "yearsExperience": 35,
+    "bio": "Italian chef whose Osteria Francescana has been named the world's best restaurant twice. Known for deconstructing Italian traditions with art-inspired presentations.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2012 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in the World", "year": 2016 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in the World", "year": 2018 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Osteria Francescana", "city": "Modena", "startYear": 1995, "isCurrent": true },
+      { "role": "Founder", "restaurant": "Casa Maria Luigia", "city": "Modena", "startYear": 2019, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "Netflix Chef's Table Season 1 Feature", "category": "MEDIA", "year": 2015 },
+      { "title": "Food for Soul - Anti-food-waste initiative", "category": "OTHER", "year": 2016 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 1200000 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 3 },
+      { "platform": "TV", "metric": "Netflix Chef's Table appearance", "value": 1 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED_BY", "detail": "Trained under Alain Ducasse", "relatedChef": "Alain Ducasse" },
+      { "type": "COLLABORATION", "detail": "Food for Soul collaboration", "relatedChef": "René Redzepi" }
+    ]
+  },
+  {
+    "name": "René Redzepi",
+    "city": "Copenhagen",
+    "country": "Denmark",
+    "currentRestaurant": "Noma",
+    "cuisineSpecialties": ["New Nordic", "Foraging", "Fermentation"],
+    "yearsExperience": 28,
+    "bio": "Danish chef who revolutionized Nordic cuisine and popularized foraging. Noma was named world's best restaurant five times before closing its traditional service in 2024.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "2 stars", "year": 2008 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in the World", "year": 2010 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in the World", "year": 2011 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in the World", "year": 2012 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in the World", "year": 2014 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in the World (Noma 2.0)", "year": 2021 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Noma", "city": "Copenhagen", "startYear": 2003, "isCurrent": true },
+      { "role": "Sous Chef", "restaurant": "El Bulli", "city": "Roses", "startYear": 1998, "endYear": 1999 }
+    ],
+    "recognitions": [
+      { "title": "TIME 100 Most Influential People", "category": "MEDIA", "year": 2012 },
+      { "title": "The Noma Guide to Fermentation", "category": "PUBLICATION", "year": 2018 },
+      { "title": "Netflix Chef's Table Feature", "category": "MEDIA", "year": 2015 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 900000 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 3 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED_BY", "detail": "Staged at El Bulli under Ferran Adrià", "relatedChef": "Ferran Adrià" },
+      { "type": "MENTORED", "detail": "Influenced an entire generation of Nordic chefs" }
+    ]
+  },
+  {
+    "name": "Heston Blumenthal",
+    "city": "Bray",
+    "country": "United Kingdom",
+    "currentRestaurant": "The Fat Duck",
+    "cuisineSpecialties": ["Molecular Gastronomy", "British", "Multi-Sensory Dining"],
+    "yearsExperience": 30,
+    "bio": "Self-taught British chef and pioneer of multi-sensory cooking and molecular gastronomy. Known for dishes like snail porridge and meat fruit.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2004 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in the World", "year": 2005 },
+      { "type": "OTHER", "detail": "Officer of the Order of the British Empire (OBE)", "year": 2006 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "The Fat Duck", "city": "Bray", "startYear": 1995, "isCurrent": true },
+      { "role": "Chef-Owner", "restaurant": "Dinner by Heston Blumenthal", "city": "London", "startYear": 2011, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "Multiple TV Series - Heston's Feasts", "category": "MEDIA", "year": 2009 },
+      { "title": "Fellow of the Royal Society of Chemistry", "category": "OTHER", "year": 2013 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 400000 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 8 },
+      { "platform": "TV", "metric": "TV series hosted", "value": 6 }
+    ],
+    "peerStandings": [
+      { "type": "COLLABORATION", "detail": "Scientific cooking research partnership", "relatedChef": "Ferran Adrià" }
+    ]
+  },
+  {
+    "name": "Ferran Adrià",
+    "city": "Barcelona",
+    "country": "Spain",
+    "currentRestaurant": "elBulli Foundation",
+    "cuisineSpecialties": ["Molecular Gastronomy", "Avant-Garde", "Spanish"],
+    "yearsExperience": 40,
+    "bio": "Catalan chef widely regarded as the father of molecular gastronomy. His restaurant El Bulli was named world's best five times before closing in 2011.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 1997 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in the World - El Bulli", "year": 2002 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in the World - El Bulli", "year": 2006 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in the World - El Bulli", "year": 2007 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in the World - El Bulli", "year": 2008 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in the World - El Bulli", "year": 2009 }
+    ],
+    "career": [
+      { "role": "Head Chef", "restaurant": "El Bulli", "city": "Roses", "startYear": 1984, "endYear": 2011 },
+      { "role": "Director", "restaurant": "elBulli Foundation", "city": "Barcelona", "startYear": 2014, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "TIME 100 Most Influential People", "category": "MEDIA", "year": 2004 },
+      { "title": "A Day at elBulli", "category": "PUBLICATION", "year": 2008 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 350000 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 10 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED", "detail": "Trained René Redzepi, Grant Achatz, and many others", "relatedChef": "René Redzepi" },
+      { "type": "MENTORED", "detail": "Trained Andoni Luis Aduriz", "relatedChef": "Andoni Luis Aduriz" }
+    ]
+  },
+  {
+    "name": "Grant Achatz",
+    "city": "Chicago",
+    "country": "United States",
+    "currentRestaurant": "Alinea",
+    "cuisineSpecialties": ["Molecular Gastronomy", "Progressive American", "Multi-Sensory"],
+    "yearsExperience": 28,
+    "bio": "American chef known for progressive cuisine at Alinea. Survived tongue cancer and returned to cooking at the highest level.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2011 },
+      { "type": "JAMES_BEARD", "detail": "Outstanding Chef", "year": 2008 },
+      { "type": "JAMES_BEARD", "detail": "Rising Star Chef", "year": 2003 },
+      { "type": "WORLDS_50_BEST", "detail": "Top 10", "year": 2015 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Alinea", "city": "Chicago", "startYear": 2005, "isCurrent": true },
+      { "role": "Chef de Cuisine", "restaurant": "Trio", "city": "Evanston", "startYear": 2001, "endYear": 2004 },
+      { "role": "Cook", "restaurant": "The French Laundry", "city": "Yountville", "startYear": 1996, "endYear": 2001 }
+    ],
+    "recognitions": [
+      { "title": "Life, on the Line - Memoir", "category": "PUBLICATION", "year": 2011 },
+      { "title": "Netflix Chef's Table Feature", "category": "MEDIA", "year": 2016 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 300000 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 2 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED_BY", "detail": "Trained at The French Laundry", "relatedChef": "Thomas Keller" },
+      { "type": "MENTORED_BY", "detail": "Staged at El Bulli", "relatedChef": "Ferran Adrià" }
+    ]
+  },
+  {
+    "name": "Yoshihiro Narisawa",
+    "city": "Tokyo",
+    "country": "Japan",
+    "currentRestaurant": "Narisawa",
+    "cuisineSpecialties": ["Innovative Japanese", "Satoyama Cuisine", "French-Japanese Fusion"],
+    "yearsExperience": 35,
+    "bio": "Japanese chef who created 'Satoyama cuisine' celebrating the Japanese philosophy of living in harmony with nature. Consistently ranked among the world's best.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "2 stars", "year": 2011 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in Asia", "year": 2013 },
+      { "type": "WORLDS_50_BEST", "detail": "Top 10", "year": 2015 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Narisawa", "city": "Tokyo", "startYear": 2003, "isCurrent": true },
+      { "role": "Apprentice", "restaurant": "Various restaurants", "city": "France", "startYear": 1989, "endYear": 1996 }
+    ],
+    "recognitions": [
+      { "title": "Sustainability Award - World's 50 Best", "category": "OTHER", "year": 2013 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 100000 }
+    ],
+    "peerStandings": [
+      { "type": "COLLABORATION", "detail": "Sustainability-focused cooking collaboration", "relatedChef": "Massimo Bottura" }
+    ]
+  },
+  {
+    "name": "Dominique Crenn",
+    "city": "San Francisco",
+    "country": "United States",
+    "currentRestaurant": "Atelier Crenn",
+    "cuisineSpecialties": ["French", "Poetic Cuisine", "Californian"],
+    "yearsExperience": 30,
+    "bio": "French-born American chef who became the first woman in the US to receive three Michelin stars. Known for her poetic approach to modern French cuisine.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2018 },
+      { "type": "JAMES_BEARD", "detail": "Best Chef West", "year": 2018 },
+      { "type": "WORLDS_50_BEST", "detail": "World's Best Female Chef", "year": 2016 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Atelier Crenn", "city": "San Francisco", "startYear": 2011, "isCurrent": true },
+      { "role": "Chef-Owner", "restaurant": "Bar Crenn", "city": "San Francisco", "startYear": 2017, "isCurrent": true },
+      { "role": "Executive Chef", "restaurant": "Luce", "city": "San Francisco", "startYear": 2008, "endYear": 2011 }
+    ],
+    "recognitions": [
+      { "title": "Netflix Chef's Table Feature", "category": "MEDIA", "year": 2019 },
+      { "title": "Rebel Chef - Memoir", "category": "PUBLICATION", "year": 2020 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 450000 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 2 }
+    ],
+    "peerStandings": [
+      { "type": "ENDORSEMENT", "detail": "Praised by peers for breaking barriers for women in fine dining" }
+    ]
+  },
+  {
+    "name": "Virgilio Martínez",
+    "city": "Lima",
+    "country": "Peru",
+    "currentRestaurant": "Central",
+    "cuisineSpecialties": ["Peruvian", "Altitude Cuisine", "Indigenous Ingredients"],
+    "yearsExperience": 22,
+    "bio": "Peruvian chef whose Central restaurant explores Peru's biodiversity through different altitudes. Named world's best restaurant in 2023.",
+    "accolades": [
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in the World", "year": 2023 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in South America", "year": 2016 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Central", "city": "Lima", "startYear": 2008, "isCurrent": true },
+      { "role": "Chef-Owner", "restaurant": "Mil", "city": "Cusco", "startYear": 2018, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "Netflix Chef's Table Feature", "category": "MEDIA", "year": 2016 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 400000 }
+    ],
+    "peerStandings": [
+      { "type": "COLLABORATION", "detail": "Mater Iniciativa research with Pía León", "relatedChef": "Pía León" }
+    ]
+  },
+  {
+    "name": "Gaggan Anand",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "currentRestaurant": "Gaggan Anand",
+    "cuisineSpecialties": ["Progressive Indian", "Molecular Gastronomy", "Thai-Indian Fusion"],
+    "yearsExperience": 22,
+    "bio": "Indian chef based in Bangkok known for his progressive Indian cuisine. His original restaurant Gaggan was named Asia's best four consecutive years.",
+    "accolades": [
+      { "type": "WORLDS_50_BEST", "detail": "Asia's Best Restaurant - Gaggan", "year": 2015 },
+      { "type": "WORLDS_50_BEST", "detail": "Asia's Best Restaurant - Gaggan", "year": 2016 },
+      { "type": "WORLDS_50_BEST", "detail": "Asia's Best Restaurant - Gaggan", "year": 2017 },
+      { "type": "WORLDS_50_BEST", "detail": "Asia's Best Restaurant - Gaggan", "year": 2018 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Gaggan Anand", "city": "Bangkok", "startYear": 2019, "isCurrent": true },
+      { "role": "Chef-Owner", "restaurant": "Gaggan", "city": "Bangkok", "startYear": 2010, "endYear": 2019 }
+    ],
+    "recognitions": [
+      { "title": "Netflix Chef's Table Feature", "category": "MEDIA", "year": 2019 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 350000 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED_BY", "detail": "Studied molecular gastronomy techniques", "relatedChef": "Ferran Adrià" }
+    ]
+  },
+  {
+    "name": "Dabiz Muñoz",
+    "city": "Madrid",
+    "country": "Spain",
+    "currentRestaurant": "DiverXO",
+    "cuisineSpecialties": ["Avant-Garde", "Asian-Mediterranean Fusion", "Spanish"],
+    "yearsExperience": 20,
+    "bio": "Spanish chef known for chaotic, bold, and theatrical cuisine at DiverXO. Named best chef in the world by The Best Chef Awards.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2013 },
+      { "type": "OTHER", "detail": "The Best Chef in the World - The Best Chef Awards", "year": 2021 },
+      { "type": "OTHER", "detail": "The Best Chef in the World - The Best Chef Awards", "year": 2022 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "DiverXO", "city": "Madrid", "startYear": 2007, "isCurrent": true },
+      { "role": "Chef-Owner", "restaurant": "StreetXO", "city": "Madrid", "startYear": 2012, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "Youngest Spanish chef to earn 3 Michelin stars", "category": "MEDIA", "year": 2013 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 1500000 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "Anne-Sophie Pic",
+    "city": "Valence",
+    "country": "France",
+    "currentRestaurant": "Maison Pic",
+    "cuisineSpecialties": ["French", "Haute Cuisine", "Aromatic Cuisine"],
+    "yearsExperience": 28,
+    "bio": "French chef and the only French woman to hold three Michelin stars. Fourth generation of the Pic culinary dynasty.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2007 },
+      { "type": "WORLDS_50_BEST", "detail": "World's Best Female Chef", "year": 2011 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Maison Pic", "city": "Valence", "startYear": 1997, "isCurrent": true },
+      { "role": "Chef-Owner", "restaurant": "Anne-Sophie Pic", "city": "Lausanne", "startYear": 2019, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "Chevalier de la Légion d'honneur", "category": "OTHER", "year": 2012 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 200000 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 3 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "Jordi Cruz",
+    "city": "Barcelona",
+    "country": "Spain",
+    "currentRestaurant": "ABaC",
+    "cuisineSpecialties": ["Catalan", "Avant-Garde", "Mediterranean"],
+    "yearsExperience": 25,
+    "bio": "Spanish chef who became the youngest chef in Spain to receive a Michelin star at age 24. Known as a judge on MasterChef Spain.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2018 },
+      { "type": "MICHELIN_STAR", "detail": "2 stars", "year": 2014 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "ABaC", "city": "Barcelona", "startYear": 2008, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "Judge on MasterChef Spain", "category": "MEDIA", "year": 2013 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 800000 },
+      { "platform": "TV", "metric": "MasterChef Spain seasons", "value": 10 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "Daniel Humm",
+    "city": "New York",
+    "country": "United States",
+    "currentRestaurant": "Eleven Madison Park",
+    "cuisineSpecialties": ["Plant-Based Fine Dining", "New American", "Swiss"],
+    "yearsExperience": 28,
+    "bio": "Swiss-born chef who led Eleven Madison Park to the top of the World's 50 Best list, then controversially pivoted to a fully plant-based menu.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2012 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in the World", "year": 2017 },
+      { "type": "JAMES_BEARD", "detail": "Outstanding Chef", "year": 2018 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Eleven Madison Park", "city": "New York", "startYear": 2006, "isCurrent": true },
+      { "role": "Executive Chef", "restaurant": "Gasthaus zum Gupf", "city": "Switzerland", "startYear": 1998, "endYear": 2003 }
+    ],
+    "recognitions": [
+      { "title": "Plant-based fine dining pioneer", "category": "MEDIA", "year": 2021 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 350000 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 2 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "Enrique Olvera",
+    "city": "Mexico City",
+    "country": "Mexico",
+    "currentRestaurant": "Pujol",
+    "cuisineSpecialties": ["Contemporary Mexican", "Mexican Haute Cuisine"],
+    "yearsExperience": 24,
+    "bio": "Mexican chef who elevated Mexican cuisine to fine dining status with Pujol. Known for his iconic mole madre aged over 1500 days.",
+    "accolades": [
+      { "type": "WORLDS_50_BEST", "detail": "Top 10", "year": 2019 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Pujol", "city": "Mexico City", "startYear": 2000, "isCurrent": true },
+      { "role": "Chef-Owner", "restaurant": "Cosme", "city": "New York", "startYear": 2014, "isCurrent": true },
+      { "role": "Chef-Owner", "restaurant": "Atla", "city": "New York", "startYear": 2017, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "Netflix Chef's Table Feature", "category": "MEDIA", "year": 2019 },
+      { "title": "Tu Casa Mi Casa - Cookbook", "category": "PUBLICATION", "year": 2019 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 500000 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 2 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED", "detail": "Inspired new generation of Mexican chefs", "relatedChef": "Daniela Soto-Innes" }
+    ]
+  },
+  {
+    "name": "Daniela Soto-Innes",
+    "city": "New York",
+    "country": "United States",
+    "currentRestaurant": "Cosme",
+    "cuisineSpecialties": ["Contemporary Mexican", "Mexican-American"],
+    "yearsExperience": 12,
+    "bio": "Mexican-American chef who became the youngest ever World's Best Female Chef at age 28. Known for energetic kitchen culture.",
+    "accolades": [
+      { "type": "WORLDS_50_BEST", "detail": "World's Best Female Chef", "year": 2019 },
+      { "type": "JAMES_BEARD", "detail": "Rising Star Chef", "year": 2016 },
+      { "type": "JAMES_BEARD", "detail": "Best Chef New York City", "year": 2019 }
+    ],
+    "career": [
+      { "role": "Executive Chef", "restaurant": "Cosme", "city": "New York", "startYear": 2014, "isCurrent": true },
+      { "role": "Chef", "restaurant": "Atla", "city": "New York", "startYear": 2017, "endYear": 2020 }
+    ],
+    "recognitions": [
+      { "title": "Forbes 30 Under 30", "category": "MEDIA", "year": 2017 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 300000 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED_BY", "detail": "Protégée of Enrique Olvera", "relatedChef": "Enrique Olvera" }
+    ]
+  },
+  {
+    "name": "Mauro Colagreco",
+    "city": "Menton",
+    "country": "France",
+    "currentRestaurant": "Mirazur",
+    "cuisineSpecialties": ["French-Argentine", "Mediterranean", "Garden-to-Table"],
+    "yearsExperience": 25,
+    "bio": "Argentine-Italian chef based in France whose Mirazur was named world's best restaurant in 2019. Known for lunar-cycle-based menus.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2019 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in the World", "year": 2019 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Mirazur", "city": "Menton", "startYear": 2006, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "First Argentine chef to earn 3 Michelin stars", "category": "MEDIA", "year": 2019 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 350000 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED_BY", "detail": "Trained under Alain Passard", "relatedChef": "Alain Passard" },
+      { "type": "MENTORED_BY", "detail": "Trained under Alain Ducasse", "relatedChef": "Alain Ducasse" }
+    ]
+  },
+  {
+    "name": "Alain Passard",
+    "city": "Paris",
+    "country": "France",
+    "currentRestaurant": "L'Arpège",
+    "cuisineSpecialties": ["French", "Vegetable-Forward", "Haute Cuisine"],
+    "yearsExperience": 40,
+    "bio": "French chef who famously pivoted from meat to vegetable-focused cuisine in 2001. Grows produce on his own three farms.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 1996 },
+      { "type": "WORLDS_50_BEST", "detail": "Top 10", "year": 2007 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "L'Arpège", "city": "Paris", "startYear": 1986, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "Netflix Chef's Table Feature", "category": "MEDIA", "year": 2017 }
+    ],
+    "publicSignals": [
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 4 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED", "detail": "Trained Mauro Colagreco", "relatedChef": "Mauro Colagreco" },
+      { "type": "MENTORED", "detail": "Trained Pascal Barbot", "relatedChef": "Pascal Barbot" }
+    ]
+  },
+  {
+    "name": "Jiro Ono",
+    "city": "Tokyo",
+    "country": "Japan",
+    "currentRestaurant": "Sukiyabashi Jiro",
+    "cuisineSpecialties": ["Sushi", "Edomae Sushi"],
+    "yearsExperience": 80,
+    "bio": "Legendary 97-year-old sushi master featured in the documentary Jiro Dreams of Sushi. Considered the greatest sushi chef alive.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2007 },
+      { "type": "OTHER", "detail": "Japanese government Living National Treasure designation", "year": 2015 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Sukiyabashi Jiro", "city": "Tokyo", "startYear": 1965, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "Jiro Dreams of Sushi Documentary", "category": "MEDIA", "year": 2011 }
+    ],
+    "publicSignals": [
+      { "platform": "OTHER", "metric": "Documentary views (millions)", "value": 50 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED", "detail": "Trained his sons Yoshikazu and Takashi Ono" }
+    ]
+  },
+  {
+    "name": "Eric Ripert",
+    "city": "New York",
+    "country": "United States",
+    "currentRestaurant": "Le Bernardin",
+    "cuisineSpecialties": ["French", "Seafood", "Haute Cuisine"],
+    "yearsExperience": 35,
+    "bio": "French-born chef who has maintained Le Bernardin's four-star New York Times rating and three Michelin stars for decades. Master of seafood cookery.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2005 },
+      { "type": "JAMES_BEARD", "detail": "Outstanding Chef", "year": 2003 },
+      { "type": "WORLDS_50_BEST", "detail": "Top 20", "year": 2015 }
+    ],
+    "career": [
+      { "role": "Chef-Co-owner", "restaurant": "Le Bernardin", "city": "New York", "startYear": 1994, "isCurrent": true },
+      { "role": "Sous Chef", "restaurant": "Le Bernardin", "city": "New York", "startYear": 1991, "endYear": 1994 }
+    ],
+    "recognitions": [
+      { "title": "32 Yolks - Memoir", "category": "PUBLICATION", "year": 2016 },
+      { "title": "Avec Eric - TV Show", "category": "MEDIA", "year": 2010 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 450000 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 5 },
+      { "platform": "TV", "metric": "show_seasons", "value": 3 }
+    ],
+    "peerStandings": [
+      { "type": "COLLABORATION", "detail": "Close friendship and collaboration", "relatedChef": "Anthony Bourdain" }
+    ]
+  },
+  {
+    "name": "Yoshihiro Murata",
+    "city": "Kyoto",
+    "country": "Japan",
+    "currentRestaurant": "Kikunoi",
+    "cuisineSpecialties": ["Kaiseki", "Traditional Japanese"],
+    "yearsExperience": 45,
+    "bio": "Third-generation owner of Kikunoi, one of Kyoto's most respected kaiseki restaurants. Advocate for preserving Japanese culinary traditions.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2009 },
+      { "type": "OTHER", "detail": "Japanese Culinary Academy Chairman" }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Kikunoi", "city": "Kyoto", "startYear": 1976, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "Kaiseki: The Exquisite Cuisine of Kyoto's Kikunoi Restaurant", "category": "PUBLICATION", "year": 2006 }
+    ],
+    "publicSignals": [
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 4 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "Andoni Luis Aduriz",
+    "city": "San Sebastián",
+    "country": "Spain",
+    "currentRestaurant": "Mugaritz",
+    "cuisineSpecialties": ["Basque", "Avant-Garde", "Techno-Emotional"],
+    "yearsExperience": 30,
+    "bio": "Basque chef known for pushing boundaries with conceptual and provocative dishes. Mugaritz regularly ranks in the world's top 10.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "2 stars", "year": 2006 },
+      { "type": "WORLDS_50_BEST", "detail": "Top 10", "year": 2019 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Mugaritz", "city": "San Sebastián", "startYear": 1998, "isCurrent": true },
+      { "role": "Apprentice", "restaurant": "El Bulli", "city": "Roses", "startYear": 1993, "endYear": 1995 }
+    ],
+    "recognitions": [
+      { "title": "Mugaritz: A Natural Science of Cooking", "category": "PUBLICATION", "year": 2012 }
+    ],
+    "publicSignals": [
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 3 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED_BY", "detail": "Trained at El Bulli", "relatedChef": "Ferran Adrià" }
+    ]
+  },
+  {
+    "name": "Alex Atala",
+    "city": "São Paulo",
+    "country": "Brazil",
+    "currentRestaurant": "D.O.M.",
+    "cuisineSpecialties": ["Brazilian", "Amazonian Ingredients", "Modern Brazilian"],
+    "yearsExperience": 28,
+    "bio": "Brazilian chef who pioneered the use of Amazonian ingredients in fine dining. Advocate for sustainability and indigenous food traditions.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "2 stars", "year": 2015 },
+      { "type": "WORLDS_50_BEST", "detail": "Top 10", "year": 2012 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "D.O.M.", "city": "São Paulo", "startYear": 1999, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "Netflix Chef's Table Feature", "category": "MEDIA", "year": 2015 },
+      { "title": "TIME 100 Most Influential People", "category": "MEDIA", "year": 2013 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 600000 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "Clare Smyth",
+    "city": "London",
+    "country": "United Kingdom",
+    "currentRestaurant": "Core by Clare Smyth",
+    "cuisineSpecialties": ["Modern British", "Fine Dining", "Farm-to-Table"],
+    "yearsExperience": 22,
+    "bio": "Northern Irish chef who was the first female chef to run a three-Michelin-star kitchen in the UK (at Gordon Ramsay's). Her own restaurant Core earned two stars.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "2 stars", "year": 2021 },
+      { "type": "WORLDS_50_BEST", "detail": "World's Best Female Chef", "year": 2018 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Core by Clare Smyth", "city": "London", "startYear": 2017, "isCurrent": true },
+      { "role": "Chef Patron", "restaurant": "Restaurant Gordon Ramsay", "city": "London", "startYear": 2012, "endYear": 2016 },
+      { "role": "Senior Sous Chef", "restaurant": "Restaurant Gordon Ramsay", "city": "London", "startYear": 2007, "endYear": 2012 }
+    ],
+    "recognitions": [
+      { "title": "MBE for services to the hospitality industry", "category": "OTHER", "year": 2013 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 200000 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED_BY", "detail": "Trained under Gordon Ramsay", "relatedChef": "Gordon Ramsay" },
+      { "type": "MENTORED_BY", "detail": "Trained at The French Laundry", "relatedChef": "Thomas Keller" }
+    ]
+  },
+  {
+    "name": "Gordon Ramsay",
+    "city": "London",
+    "country": "United Kingdom",
+    "currentRestaurant": "Restaurant Gordon Ramsay",
+    "cuisineSpecialties": ["French", "British", "Haute Cuisine"],
+    "yearsExperience": 35,
+    "bio": "Scottish-born chef and prolific TV personality. His flagship restaurant has held three Michelin stars since 2001. Runs a global restaurant empire.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2001 },
+      { "type": "OTHER", "detail": "Officer of the Order of the British Empire (OBE)", "year": 2006 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Restaurant Gordon Ramsay", "city": "London", "startYear": 1998, "isCurrent": true },
+      { "role": "Chef", "restaurant": "Aubergine", "city": "London", "startYear": 1993, "endYear": 1998 },
+      { "role": "Apprentice", "restaurant": "Harvey's", "city": "London", "startYear": 1988, "endYear": 1990 }
+    ],
+    "recognitions": [
+      { "title": "Hell's Kitchen - TV Show", "category": "MEDIA", "year": 2005 },
+      { "title": "MasterChef US Judge", "category": "MEDIA", "year": 2010 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 16000000 },
+      { "platform": "YOUTUBE", "metric": "subscribers", "value": 20000000 },
+      { "platform": "TV", "metric": "TV shows", "value": 15 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 20 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED_BY", "detail": "Trained under Marco Pierre White", "relatedChef": "Marco Pierre White" },
+      { "type": "MENTORED_BY", "detail": "Worked under Guy Savoy in Paris", "relatedChef": "Guy Savoy" },
+      { "type": "MENTORED", "detail": "Trained Clare Smyth, Marcus Wareing, and many others", "relatedChef": "Clare Smyth" }
+    ]
+  },
+  {
+    "name": "Marco Pierre White",
+    "city": "London",
+    "country": "United Kingdom",
+    "currentRestaurant": "Marco Pierre White Restaurants",
+    "cuisineSpecialties": ["French", "British", "Classic European"],
+    "yearsExperience": 40,
+    "bio": "Became the youngest chef to earn three Michelin stars at age 33. Enfant terrible of British cuisine who later returned his stars. Mentor to Gordon Ramsay and many others.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 1995 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Harvey's", "city": "London", "startYear": 1987, "endYear": 1993 },
+      { "role": "Chef-Owner", "restaurant": "The Restaurant Marco Pierre White", "city": "London", "startYear": 1993, "endYear": 1999 },
+      { "role": "Restaurateur", "restaurant": "Marco Pierre White Restaurants", "city": "London", "startYear": 2000, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "White Heat - Iconic Cookbook", "category": "PUBLICATION", "year": 1990 }
+    ],
+    "publicSignals": [
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 5 },
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 500000 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED", "detail": "Trained Gordon Ramsay", "relatedChef": "Gordon Ramsay" },
+      { "type": "MENTORED", "detail": "Trained Heston Blumenthal", "relatedChef": "Heston Blumenthal" }
+    ]
+  },
+  {
+    "name": "Guy Savoy",
+    "city": "Paris",
+    "country": "France",
+    "currentRestaurant": "Restaurant Guy Savoy",
+    "cuisineSpecialties": ["French", "Haute Cuisine"],
+    "yearsExperience": 45,
+    "bio": "French chef whose Paris restaurant consistently ranks as one of the best in the world. Known for his artichoke and truffle soup.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2002 },
+      { "type": "OTHER", "detail": "La Liste - Best Restaurant in the World", "year": 2017 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Restaurant Guy Savoy", "city": "Paris", "startYear": 1980, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "Chevalier de la Légion d'honneur", "category": "OTHER", "year": 2008 }
+    ],
+    "publicSignals": [
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 6 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED", "detail": "Trained Gordon Ramsay in Paris", "relatedChef": "Gordon Ramsay" }
+    ]
+  },
+  {
+    "name": "Yannick Alléno",
+    "city": "Paris",
+    "country": "France",
+    "currentRestaurant": "Pavillon Ledoyen",
+    "cuisineSpecialties": ["French", "Modern Sauces", "Haute Cuisine"],
+    "yearsExperience": 30,
+    "bio": "French chef known for his revolutionary approach to sauces through extraction and fermentation techniques. Holds multiple three-star establishments.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2014 },
+      { "type": "WORLDS_50_BEST", "detail": "Top 50", "year": 2019 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Pavillon Ledoyen", "city": "Paris", "startYear": 2014, "isCurrent": true },
+      { "role": "Head Chef", "restaurant": "Le Meurice", "city": "Paris", "startYear": 2003, "endYear": 2013 }
+    ],
+    "recognitions": [],
+    "publicSignals": [
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 5 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "Björn Frantzén",
+    "city": "Stockholm",
+    "country": "Sweden",
+    "currentRestaurant": "Frantzén",
+    "cuisineSpecialties": ["Nordic", "Japanese-Scandinavian", "Haute Cuisine"],
+    "yearsExperience": 22,
+    "bio": "Swedish chef whose restaurant Frantzén earned three Michelin stars, one of few in Scandinavia. Blends Nordic and Japanese influences.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2018 },
+      { "type": "WORLDS_50_BEST", "detail": "Top 20", "year": 2022 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Frantzén", "city": "Stockholm", "startYear": 2008, "isCurrent": true }
+    ],
+    "recognitions": [],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 100000 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "Rasmus Kofoed",
+    "city": "Copenhagen",
+    "country": "Denmark",
+    "currentRestaurant": "Geranium",
+    "cuisineSpecialties": ["New Nordic", "Vegetable-Forward", "Danish"],
+    "yearsExperience": 25,
+    "bio": "Danish chef whose Geranium was named world's best restaurant in 2022. Also holds three Michelin stars and won gold at the Bocuse d'Or.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2016 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in the World", "year": 2022 },
+      { "type": "BOCUSE_DOR", "detail": "Gold Medal", "year": 2011 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Geranium", "city": "Copenhagen", "startYear": 2007, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "Only chef to win Bocuse d'Or bronze, silver, and gold", "category": "OTHER", "year": 2011 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 150000 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "Ana Roš",
+    "city": "Kobarid",
+    "country": "Slovenia",
+    "currentRestaurant": "Hiša Franko",
+    "cuisineSpecialties": ["Slovenian", "Alpine", "Foraged"],
+    "yearsExperience": 20,
+    "bio": "Self-taught Slovenian chef who brought global attention to Slovenian cuisine. Named World's Best Female Chef in 2017.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "2 stars", "year": 2020 },
+      { "type": "WORLDS_50_BEST", "detail": "World's Best Female Chef", "year": 2017 },
+      { "type": "WORLDS_50_BEST", "detail": "Top 50", "year": 2022 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Hiša Franko", "city": "Kobarid", "startYear": 2002, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "Netflix Chef's Table Feature", "category": "MEDIA", "year": 2016 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 200000 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "Asma Khan",
+    "city": "London",
+    "country": "United Kingdom",
+    "currentRestaurant": "Darjeeling Express",
+    "cuisineSpecialties": ["Indian", "Bengali", "Mughlai"],
+    "yearsExperience": 15,
+    "bio": "Indian-born British chef and the first British chef to be featured on Netflix Chef's Table. Runs an all-female kitchen at Darjeeling Express.",
+    "accolades": [
+      { "type": "OTHER", "detail": "First British chef on Netflix Chef's Table", "year": 2019 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Darjeeling Express", "city": "London", "startYear": 2017, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "Netflix Chef's Table Feature", "category": "MEDIA", "year": 2019 },
+      { "title": "Asma's Indian Kitchen - Cookbook", "category": "PUBLICATION", "year": 2018 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 150000 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 1 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "Kwame Onwuachi",
+    "city": "New York",
+    "country": "United States",
+    "currentRestaurant": "Tatiana by Kwame Onwuachi",
+    "cuisineSpecialties": ["Afro-Caribbean", "American", "Nigerian-Influenced"],
+    "yearsExperience": 12,
+    "bio": "Nigerian-Jamaican-American chef who gained fame for his work at Kith and Kin in DC. His restaurant Tatiana was named #1 new restaurant in America by the NYT.",
+    "accolades": [
+      { "type": "JAMES_BEARD", "detail": "Rising Star Chef", "year": 2019 },
+      { "type": "JAMES_BEARD", "detail": "Best Chef New York State", "year": 2023 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Tatiana by Kwame Onwuachi", "city": "New York", "startYear": 2022, "isCurrent": true },
+      { "role": "Executive Chef", "restaurant": "Kith and Kin", "city": "Washington DC", "startYear": 2017, "endYear": 2020 }
+    ],
+    "recognitions": [
+      { "title": "Notes from a Young Black Chef - Memoir", "category": "PUBLICATION", "year": 2019 },
+      { "title": "Top Chef contestant", "category": "MEDIA", "year": 2016 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 350000 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 2 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "Mashama Bailey",
+    "city": "Savannah",
+    "country": "United States",
+    "currentRestaurant": "The Grey",
+    "cuisineSpecialties": ["Southern", "Port City Southern", "African-American Heritage"],
+    "yearsExperience": 20,
+    "bio": "American chef who transformed a former segregated bus station into one of the South's most celebrated restaurants.",
+    "accolades": [
+      { "type": "JAMES_BEARD", "detail": "Outstanding Chef", "year": 2022 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "The Grey", "city": "Savannah", "startYear": 2014, "isCurrent": true },
+      { "role": "Chef", "restaurant": "Prune", "city": "New York", "startYear": 2007, "endYear": 2013 }
+    ],
+    "recognitions": [
+      { "title": "Black, White, and The Grey - Book", "category": "PUBLICATION", "year": 2021 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 80000 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "Sean Brock",
+    "city": "Nashville",
+    "country": "United States",
+    "currentRestaurant": "Audrey",
+    "cuisineSpecialties": ["Southern", "Appalachian", "Heritage Ingredients"],
+    "yearsExperience": 22,
+    "bio": "American chef devoted to preserving Southern Appalachian foodways. Known for growing heirloom grains and reviving forgotten Southern ingredients.",
+    "accolades": [
+      { "type": "JAMES_BEARD", "detail": "Best Chef Southeast", "year": 2010 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Audrey", "city": "Nashville", "startYear": 2021, "isCurrent": true },
+      { "role": "Chef", "restaurant": "Husk", "city": "Charleston", "startYear": 2010, "endYear": 2019 },
+      { "role": "Chef de Cuisine", "restaurant": "McCrady's", "city": "Charleston", "startYear": 2006, "endYear": 2010 }
+    ],
+    "recognitions": [
+      { "title": "Heritage - Cookbook", "category": "PUBLICATION", "year": 2014 },
+      { "title": "Netflix Chef's Table Feature", "category": "MEDIA", "year": 2019 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 300000 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 2 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "Corey Lee",
+    "city": "San Francisco",
+    "country": "United States",
+    "currentRestaurant": "Benu",
+    "cuisineSpecialties": ["Korean-American", "Asian-Influenced Fine Dining"],
+    "yearsExperience": 25,
+    "bio": "Korean-American chef who trained extensively at The French Laundry before opening Benu, which blends Korean heritage with French technique.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2014 },
+      { "type": "JAMES_BEARD", "detail": "Best Chef West", "year": 2016 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Benu", "city": "San Francisco", "startYear": 2010, "isCurrent": true },
+      { "role": "Chef de Cuisine", "restaurant": "The French Laundry", "city": "Yountville", "startYear": 2001, "endYear": 2010 }
+    ],
+    "recognitions": [],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 50000 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED_BY", "detail": "Rose through ranks at The French Laundry", "relatedChef": "Thomas Keller" }
+    ]
+  },
+  {
+    "name": "Christina Tosi",
+    "city": "New York",
+    "country": "United States",
+    "currentRestaurant": "Milk Bar",
+    "cuisineSpecialties": ["Pastry", "American Desserts", "Bakery"],
+    "yearsExperience": 18,
+    "bio": "American pastry chef and founder of Milk Bar. Known for Crack Pie, Cereal Milk soft serve, and reinventing American nostalgia desserts.",
+    "accolades": [
+      { "type": "JAMES_BEARD", "detail": "Rising Star Chef", "year": 2012 },
+      { "type": "JAMES_BEARD", "detail": "Outstanding Baker", "year": 2015 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Milk Bar", "city": "New York", "startYear": 2008, "isCurrent": true },
+      { "role": "Pastry Chef", "restaurant": "Momofuku", "city": "New York", "startYear": 2005, "endYear": 2008 }
+    ],
+    "recognitions": [
+      { "title": "MasterChef Junior Judge", "category": "MEDIA", "year": 2015 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 700000 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 3 },
+      { "platform": "TV", "metric": "TV appearances", "value": 5 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED_BY", "detail": "Started at Momofuku under David Chang", "relatedChef": "David Chang" }
+    ]
+  },
+  {
+    "name": "David Chang",
+    "city": "New York",
+    "country": "United States",
+    "currentRestaurant": "Momofuku",
+    "cuisineSpecialties": ["Korean-American", "Asian Fusion", "Ramen"],
+    "yearsExperience": 22,
+    "bio": "Korean-American chef and founder of the Momofuku restaurant group. Transformed casual Asian dining and media presence of chefs.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "2 stars", "year": 2009 },
+      { "type": "JAMES_BEARD", "detail": "Outstanding Chef", "year": 2013 },
+      { "type": "WORLDS_50_BEST", "detail": "Top 20 - Momofuku Ko", "year": 2010 }
+    ],
+    "career": [
+      { "role": "Founder", "restaurant": "Momofuku", "city": "New York", "startYear": 2004, "isCurrent": true },
+      { "role": "Chef-Owner", "restaurant": "Momofuku Ko", "city": "New York", "startYear": 2008, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "Ugly Delicious - Netflix Series", "category": "MEDIA", "year": 2018 },
+      { "title": "Eat a Peach - Memoir", "category": "PUBLICATION", "year": 2020 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 800000 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 3 },
+      { "platform": "TV", "metric": "Netflix series", "value": 2 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED", "detail": "Launched Christina Tosi's career", "relatedChef": "Christina Tosi" }
+    ]
+  },
+  {
+    "name": "Pía León",
+    "city": "Lima",
+    "country": "Peru",
+    "currentRestaurant": "Kjolle",
+    "cuisineSpecialties": ["Peruvian", "Andean", "Contemporary South American"],
+    "yearsExperience": 15,
+    "bio": "Peruvian chef and co-head chef of Central who opened her own restaurant Kjolle. Named World's Best Female Chef in 2021.",
+    "accolades": [
+      { "type": "WORLDS_50_BEST", "detail": "World's Best Female Chef", "year": 2021 },
+      { "type": "WORLDS_50_BEST", "detail": "Kjolle - Top 50", "year": 2023 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Kjolle", "city": "Lima", "startYear": 2018, "isCurrent": true },
+      { "role": "Head Chef", "restaurant": "Central", "city": "Lima", "startYear": 2012, "endYear": 2018 }
+    ],
+    "recognitions": [],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 200000 }
+    ],
+    "peerStandings": [
+      { "type": "COLLABORATION", "detail": "Married to and formerly co-led Central with", "relatedChef": "Virgilio Martínez" }
+    ]
+  },
+  {
+    "name": "Jesús Sánchez",
+    "city": "Santander",
+    "country": "Spain",
+    "currentRestaurant": "Cenador de Amós",
+    "cuisineSpecialties": ["Cantabrian", "Modern Spanish", "Seasonal"],
+    "yearsExperience": 25,
+    "bio": "Spanish chef who earned three Michelin stars for Cenador de Amós, a restaurant in a converted 18th-century palace in Cantabria.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2020 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Cenador de Amós", "city": "Santander", "startYear": 2001, "isCurrent": true }
+    ],
+    "recognitions": [],
+    "publicSignals": [],
+    "peerStandings": []
+  },
+  {
+    "name": "Jonnie Boer",
+    "city": "Zwolle",
+    "country": "Netherlands",
+    "currentRestaurant": "De Librije",
+    "cuisineSpecialties": ["Dutch", "Modern European", "Creative Cuisine"],
+    "yearsExperience": 35,
+    "bio": "Dutch chef who earned three Michelin stars for De Librije. Regularly features in the World's 50 Best list.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2004 },
+      { "type": "WORLDS_50_BEST", "detail": "Top 50", "year": 2016 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "De Librije", "city": "Zwolle", "startYear": 1991, "isCurrent": true }
+    ],
+    "recognitions": [],
+    "publicSignals": [],
+    "peerStandings": []
+  },
+  {
+    "name": "Ivan Orkin",
+    "city": "New York",
+    "country": "United States",
+    "currentRestaurant": "Ivan Ramen",
+    "cuisineSpecialties": ["Ramen", "Japanese", "Japanese-American"],
+    "yearsExperience": 20,
+    "bio": "American chef who gained fame running ramen shops in Tokyo as a foreigner, then brought his craft to New York.",
+    "accolades": [
+      { "type": "OTHER", "detail": "First non-Japanese ramen chef to gain major recognition in Tokyo" }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Ivan Ramen", "city": "New York", "startYear": 2013, "isCurrent": true },
+      { "role": "Chef-Owner", "restaurant": "Ivan Ramen", "city": "Tokyo", "startYear": 2007, "endYear": 2015 }
+    ],
+    "recognitions": [
+      { "title": "Netflix Chef's Table Feature", "category": "MEDIA", "year": 2019 },
+      { "title": "Ivan Ramen - Cookbook", "category": "PUBLICATION", "year": 2013 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 100000 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 2 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "Leonor Espinosa",
+    "city": "Bogotá",
+    "country": "Colombia",
+    "currentRestaurant": "Leo",
+    "cuisineSpecialties": ["Colombian", "Indigenous Ingredients", "Afro-Colombian"],
+    "yearsExperience": 18,
+    "bio": "Colombian chef who uses indigenous and Afro-Colombian ingredients to tell the story of Colombian biodiversity through cuisine.",
+    "accolades": [
+      { "type": "WORLDS_50_BEST", "detail": "World's Best Female Chef", "year": 2022 },
+      { "type": "WORLDS_50_BEST", "detail": "Top 50", "year": 2022 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Leo", "city": "Bogotá", "startYear": 2007, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "Funleo Foundation for biodiversity research", "category": "OTHER", "year": 2008 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 80000 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "Mitsuharu Tsumura",
+    "city": "Lima",
+    "country": "Peru",
+    "currentRestaurant": "Maido",
+    "cuisineSpecialties": ["Nikkei", "Japanese-Peruvian Fusion"],
+    "yearsExperience": 18,
+    "bio": "Japanese-Peruvian chef who popularized Nikkei cuisine globally. Maido blends Japanese technique with Peruvian ingredients.",
+    "accolades": [
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in South America", "year": 2017 },
+      { "type": "WORLDS_50_BEST", "detail": "Top 10", "year": 2019 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Maido", "city": "Lima", "startYear": 2009, "isCurrent": true }
+    ],
+    "recognitions": [],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 200000 }
+    ],
+    "peerStandings": [
+      { "type": "COLLABORATION", "detail": "Part of Lima's culinary renaissance alongside", "relatedChef": "Virgilio Martínez" }
+    ]
+  },
+  {
+    "name": "Zaiyu Hasegawa",
+    "city": "Tokyo",
+    "country": "Japan",
+    "currentRestaurant": "Den",
+    "cuisineSpecialties": ["Modern Japanese", "Playful Kaiseki"],
+    "yearsExperience": 20,
+    "bio": "Japanese chef known for his playful approach to traditional Japanese cuisine. Den is beloved for dishes with humor and surprise.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "2 stars", "year": 2018 },
+      { "type": "WORLDS_50_BEST", "detail": "Top 5", "year": 2022 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Den", "city": "Tokyo", "startYear": 2007, "isCurrent": true }
+    ],
+    "recognitions": [],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 100000 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "Will Goldfarb",
+    "city": "Ubud",
+    "country": "Indonesia",
+    "currentRestaurant": "Room4Dessert",
+    "cuisineSpecialties": ["Pastry", "Avant-Garde Desserts", "Tropical Ingredients"],
+    "yearsExperience": 22,
+    "bio": "American pastry chef who moved to Bali and creates avant-garde desserts using tropical Indonesian ingredients.",
+    "accolades": [
+      { "type": "WORLDS_50_BEST", "detail": "Asia's Best Pastry Chef", "year": 2019 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Room4Dessert", "city": "Ubud", "startYear": 2014, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "Netflix Chef's Table: Pastry Feature", "category": "MEDIA", "year": 2018 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 80000 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "Disfrutar Team (Oriol Castro, Eduard Xatruch, Mateu Casañas)",
+    "city": "Barcelona",
+    "country": "Spain",
+    "currentRestaurant": "Disfrutar",
+    "cuisineSpecialties": ["Mediterranean", "Avant-Garde", "Molecular"],
+    "yearsExperience": 25,
+    "bio": "Trio of chefs who all trained at El Bulli and opened Disfrutar, which was named World's Best Restaurant in 2024.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "2 stars", "year": 2020 },
+      { "type": "WORLDS_50_BEST", "detail": "Best Restaurant in the World", "year": 2024 },
+      { "type": "WORLDS_50_BEST", "detail": "Top 5", "year": 2023 }
+    ],
+    "career": [
+      { "role": "Chef-Owners", "restaurant": "Disfrutar", "city": "Barcelona", "startYear": 2014, "isCurrent": true },
+      { "role": "Head Chefs", "restaurant": "El Bulli", "city": "Roses", "startYear": 1996, "endYear": 2011 }
+    ],
+    "recognitions": [],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 300000 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED_BY", "detail": "All three trained under Ferran Adrià at El Bulli", "relatedChef": "Ferran Adrià" }
+    ]
+  },
+  {
+    "name": "Jessica Préalpato",
+    "city": "Paris",
+    "country": "France",
+    "currentRestaurant": "Alain Ducasse au Plaza Athénée",
+    "cuisineSpecialties": ["Pastry", "Natural Desserts", "Low-Sugar"],
+    "yearsExperience": 15,
+    "bio": "French pastry chef who champions naturalité in desserts, reducing sugar and letting natural flavors of fruits and vegetables shine.",
+    "accolades": [
+      { "type": "WORLDS_50_BEST", "detail": "World's Best Pastry Chef", "year": 2019 }
+    ],
+    "career": [
+      { "role": "Pastry Chef", "restaurant": "Alain Ducasse au Plaza Athénée", "city": "Paris", "startYear": 2015, "isCurrent": true }
+    ],
+    "recognitions": [],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 60000 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED_BY", "detail": "Works under Alain Ducasse", "relatedChef": "Alain Ducasse" }
+    ]
+  },
+  {
+    "name": "Julien Royer",
+    "city": "Singapore",
+    "country": "Singapore",
+    "currentRestaurant": "Odette",
+    "cuisineSpecialties": ["French", "Modern French", "French-Asian"],
+    "yearsExperience": 20,
+    "bio": "French chef based in Singapore whose restaurant Odette consistently ranks among the best in Asia and the world.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "3 stars", "year": 2019 },
+      { "type": "WORLDS_50_BEST", "detail": "Asia's Best Restaurant", "year": 2019 },
+      { "type": "WORLDS_50_BEST", "detail": "Top 10", "year": 2023 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Odette", "city": "Singapore", "startYear": 2015, "isCurrent": true },
+      { "role": "Chef de Cuisine", "restaurant": "Jaan", "city": "Singapore", "startYear": 2011, "endYear": 2015 }
+    ],
+    "recognitions": [],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 80000 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "Vicky Lau",
+    "city": "Hong Kong",
+    "country": "China",
+    "currentRestaurant": "Tate Dining Room",
+    "cuisineSpecialties": ["French-Chinese", "Ode to Ingredients", "Cantonese-French Fusion"],
+    "yearsExperience": 15,
+    "bio": "Hong Kong-based chef known for her 'Edible Stories' tasting menus that bridge French and Chinese culinary traditions.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "2 stars", "year": 2023 },
+      { "type": "WORLDS_50_BEST", "detail": "Asia's Best Female Chef", "year": 2015 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Tate Dining Room", "city": "Hong Kong", "startYear": 2012, "isCurrent": true }
+    ],
+    "recognitions": [],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 50000 }
+    ],
+    "peerStandings": []
+  },
+  {
+    "name": "José Andrés",
+    "city": "Washington DC",
+    "country": "United States",
+    "currentRestaurant": "Minibar by José Andrés",
+    "cuisineSpecialties": ["Spanish", "Tapas", "Molecular Gastronomy"],
+    "yearsExperience": 35,
+    "bio": "Spanish-American chef known for bringing tapas to America and his humanitarian work through World Central Kitchen.",
+    "accolades": [
+      { "type": "MICHELIN_STAR", "detail": "2 stars", "year": 2016 },
+      { "type": "JAMES_BEARD", "detail": "Outstanding Chef", "year": 2011 },
+      { "type": "OTHER", "detail": "National Humanities Medal", "year": 2015 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Minibar by José Andrés", "city": "Washington DC", "startYear": 2003, "isCurrent": true },
+      { "role": "Chef-Owner", "restaurant": "Jaleo", "city": "Washington DC", "startYear": 1993, "isCurrent": true },
+      { "role": "Cook", "restaurant": "El Bulli", "city": "Roses", "startYear": 1988, "endYear": 1991 }
+    ],
+    "recognitions": [
+      { "title": "World Central Kitchen Founder", "category": "OTHER", "year": 2010 },
+      { "title": "TIME 100 Most Influential People", "category": "MEDIA", "year": 2018 },
+      { "title": "Nobel Peace Prize Nomination", "category": "OTHER", "year": 2019 }
+    ],
+    "publicSignals": [
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 1500000 },
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 4 },
+      { "platform": "TV", "metric": "TV appearances", "value": 10 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED_BY", "detail": "Trained at El Bulli", "relatedChef": "Ferran Adrià" }
+    ]
+  },
+  {
+    "name": "Alice Waters",
+    "city": "Berkeley",
+    "country": "United States",
+    "currentRestaurant": "Chez Panisse",
+    "cuisineSpecialties": ["Californian", "Farm-to-Table", "French-Californian"],
+    "yearsExperience": 53,
+    "bio": "Pioneer of the farm-to-table movement in America. Chez Panisse has been serving seasonal, locally-sourced cuisine since 1971.",
+    "accolades": [
+      { "type": "JAMES_BEARD", "detail": "Outstanding Chef", "year": 1992 },
+      { "type": "JAMES_BEARD", "detail": "Humanitarian of the Year", "year": 1997 },
+      { "type": "OTHER", "detail": "National Humanities Medal", "year": 2015 }
+    ],
+    "career": [
+      { "role": "Chef-Owner", "restaurant": "Chez Panisse", "city": "Berkeley", "startYear": 1971, "isCurrent": true }
+    ],
+    "recognitions": [
+      { "title": "Edible Schoolyard Project Founder", "category": "OTHER", "year": 1995 },
+      { "title": "Inducted into the Culinary Hall of Fame", "category": "OTHER", "year": 2015 }
+    ],
+    "publicSignals": [
+      { "platform": "COOKBOOK", "metric": "books_published", "value": 10 },
+      { "platform": "INSTAGRAM", "metric": "followers", "value": 200000 }
+    ],
+    "peerStandings": [
+      { "type": "MENTORED", "detail": "Influenced entire farm-to-table generation" }
+    ]
+  }
+]

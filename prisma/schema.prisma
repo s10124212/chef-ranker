@@ -1,0 +1,275 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Chef {
+  id                 String  @id @default(cuid())
+  name               String
+  slug               String  @unique
+  city               String?
+  country            String?
+  currentRestaurant  String?
+  cuisineSpecialties String? // JSON array stored as string
+  yearsExperience    Int?
+  photoUrl           String?
+  bio                String?
+  isArchived         Boolean @default(false)
+
+  totalScore Float @default(0)
+  rank       Int?
+
+  accolades       Accolade[]
+  careerEntries   CareerEntry[]
+  recognitions    IndustryRecognition[]
+  publicSignals   PublicSignal[]
+  peerStandings   PeerStanding[]
+  snapshotEntries SnapshotEntry[]
+  dataSources     DataSource[]
+  newsItems       NewsItemChef[]
+  contact         ChefContact?
+  outreachDrafts  OutreachDraft[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Accolade {
+  id        String   @id @default(cuid())
+  chefId    String
+  chef      Chef     @relation(fields: [chefId], references: [id], onDelete: Cascade)
+  type      String // MICHELIN_STAR, JAMES_BEARD, WORLDS_50_BEST, BOCUSE_DOR, OTHER
+  detail    String? // e.g. "3 stars", "Best New Restaurant"
+  year      Int?
+  sourceUrl String?
+  createdAt DateTime @default(now())
+}
+
+model CareerEntry {
+  id         String   @id @default(cuid())
+  chefId     String
+  chef       Chef     @relation(fields: [chefId], references: [id], onDelete: Cascade)
+  role       String
+  restaurant String
+  city       String?
+  startYear  Int?
+  endYear    Int?
+  isCurrent  Boolean  @default(false)
+  sourceUrl  String?
+  createdAt  DateTime @default(now())
+}
+
+model IndustryRecognition {
+  id        String   @id @default(cuid())
+  chefId    String
+  chef      Chef     @relation(fields: [chefId], references: [id], onDelete: Cascade)
+  title     String // e.g. "Guest Judge - MasterChef"
+  category  String? // MEDIA, MENTORSHIP, PUBLICATION, SPEAKING, OTHER
+  year      Int?
+  sourceUrl String?
+  createdAt DateTime @default(now())
+}
+
+model PublicSignal {
+  id        String   @id @default(cuid())
+  chefId    String
+  chef      Chef     @relation(fields: [chefId], references: [id], onDelete: Cascade)
+  platform  String // INSTAGRAM, YOUTUBE, COOKBOOK, TV, OTHER
+  metric    String? // e.g. "1.2M followers"
+  value     Float? // numeric value for scoring
+  sourceUrl String?
+  createdAt DateTime @default(now())
+}
+
+model PeerStanding {
+  id          String   @id @default(cuid())
+  chefId      String
+  chef        Chef     @relation(fields: [chefId], references: [id], onDelete: Cascade)
+  type        String // MENTORED_BY, MENTORED, COLLABORATION, ENDORSEMENT
+  detail      String?
+  relatedChef String?
+  sourceUrl   String?
+  createdAt   DateTime @default(now())
+}
+
+model ScoringWeight {
+  id        String   @id @default(cuid())
+  category  String   @unique // formalAccolades, careerTrack, credentials, industryRecognition, publicSignals, peerStanding
+  weight    Float
+  updatedAt DateTime @updatedAt
+}
+
+model MonthlySnapshot {
+  id          String          @id @default(cuid())
+  month       String          @unique // YYYY-MM format
+  publishedAt DateTime?
+  notes       String?
+  entries     SnapshotEntry[]
+  createdAt   DateTime        @default(now())
+}
+
+model SnapshotEntry {
+  id         String          @id @default(cuid())
+  snapshotId String
+  snapshot   MonthlySnapshot @relation(fields: [snapshotId], references: [id], onDelete: Cascade)
+  chefId     String
+  chef       Chef            @relation(fields: [chefId], references: [id], onDelete: Cascade)
+  rank       Int
+  totalScore Float
+  breakdown  String? // JSON: { formalAccolades, careerTrack, credentials, industryRecognition, publicSignals, peerStanding }
+  delta      Int? // rank change from previous month
+  createdAt  DateTime        @default(now())
+
+  @@unique([snapshotId, chefId])
+}
+
+model NewsItem {
+  id                String         @id @default(cuid())
+  title             String
+  url               String         @unique
+  source            String // publication name
+  imageUrl          String?
+  summary           String?
+  category          String // RESTAURANT, AWARD, FEATURE, JOB_CHANGE, TV_MEDIA, COOKBOOK, EVENT, INTERVIEW, OTHER
+  publishedAt       DateTime
+  isTasteRelevant   Boolean        @default(false)
+  relevanceCategory String?
+  relevanceScore    Int            @default(0)
+  fetchedAt         DateTime       @default(now())
+  dataExtracted     Boolean        @default(false)
+  chefs             NewsItemChef[]
+}
+
+model NewsItemChef {
+  id         String   @id @default(cuid())
+  newsItemId String
+  newsItem   NewsItem @relation(fields: [newsItemId], references: [id], onDelete: Cascade)
+  chefId     String
+  chef       Chef     @relation(fields: [chefId], references: [id], onDelete: Cascade)
+
+  @@unique([newsItemId, chefId])
+}
+
+model ChefContact {
+  id                     String   @id @default(cuid())
+  chefId                 String   @unique
+  chef                   Chef     @relation(fields: [chefId], references: [id], onDelete: Cascade)
+  email                  String?
+  agentName              String?
+  agentEmail             String?
+  restaurantEmail        String?
+  phone                  String?
+  preferredContactMethod String?
+  linkedinUrl            String?
+  notes                  String?
+  updatedAt              DateTime @updatedAt
+}
+
+model EmailTemplate {
+  id        String   @id @default(cuid())
+  name      String
+  category  String
+  subject   String
+  body      String
+  isDefault Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model OutreachDraft {
+  id              String   @id @default(cuid())
+  chefId          String
+  chef            Chef     @relation(fields: [chefId], references: [id], onDelete: Cascade)
+  templateId      String?
+  toEmail         String?
+  subject         String
+  body            String
+  status          String   @default("drafted")
+  isAutoGenerated Boolean  @default(false)
+  dataPointsUsed  String?
+  confidence      String?
+  previousDraftId String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model SenderSettings {
+  id      String  @id @default(cuid())
+  name    String?
+  title   String?
+  company String?
+  email   String?
+}
+
+model OutreachSettings {
+  id       String @id @default(cuid())
+  purpose  String @default("We want to connect one-on-one to understand what top chefs look for in an assistant, what tools and support they rely on, and what's missing.")
+  tone     String @default("warm")
+  maxWords Int    @default(150)
+}
+
+model NewsSubscriber {
+  id             String    @id @default(cuid())
+  email          String    @unique
+  isActive       Boolean   @default(true)
+  subscribedAt   DateTime  @default(now())
+  unsubscribedAt DateTime?
+  lastDigestSent DateTime?
+}
+
+model DigestLog {
+  id             String   @id @default(cuid())
+  sentAt         DateTime @default(now())
+  recipientCount Int
+  storyCount     Int
+  subject        String
+  htmlContent    String
+  newsItemIds    String
+}
+
+model DigestSettings {
+  id         String @id @default(cuid())
+  fromEmail  String @default("digest@chefranker.com")
+  fromName   String @default("Chef Ranker")
+  sendHour   Int    @default(8)
+  sendMinute Int    @default(0)
+  timezone   String @default("America/New_York")
+}
+
+model DataSource {
+  id        String    @id @default(cuid())
+  chefId    String?
+  chef      Chef?     @relation(fields: [chefId], references: [id], onDelete: Cascade)
+  name      String // e.g. "Michelin Guide", "World's 50 Best"
+  url       String?
+  fetchedAt DateTime?
+  status    String? // SUCCESS, FAILED, MANUAL
+  notes     String?
+  createdAt DateTime  @default(now())
+}
+
+model UpdateStepLog {
+  id            String   @id @default(cuid())
+  stepName      String // data_collection, news_refresh, score_recalculation, publish_snapshot
+  status        String // success, error
+  resultSummary String?
+  itemsAffected Int?
+  runAt         DateTime @default(now())
+}
+
+model HealthCheckLog {
+  id           String   @id @default(cuid())
+  category     String // data_health, scoring, news_quality, api_infra, e2e_workflow
+  checkName    String
+  status       String // pass, fail, warning
+  totalChecks  Int?
+  passedChecks Int?
+  failedChecks Int?
+  details      String? // JSON blob with full results
+  duration     Int? // milliseconds
+  runAt        DateTime @default(now())
+}
