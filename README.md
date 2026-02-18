@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chef Ranker
 
-## Getting Started
+A chef ranking and monitoring platform that tracks the world's top chefs across four scoring categories: Formal Accolades, Career Track, Public Signals, and Peer Standing. Built with Next.js, Prisma, and SQLite.
 
-First, run the development server:
+## Features
+
+- **Leaderboard** -- ranked list of 53+ chefs with composite scores
+- **Chef Profiles** -- detailed pages with score breakdowns, accolades, career history, and news
+- **Scoring System** -- configurable weights across 4 categories with a 10-year rolling window
+- **News Collection** -- automated Google News RSS fetching with taste-relevance tagging
+- **Data Collectors** -- scrapers for Michelin Guide, James Beard, World's 50 Best, Instagram
+- **AI Extraction** -- Claude-powered extraction of structured data from news articles
+- **Outreach Drafts** -- AI-generated outreach emails for chefs
+- **Monthly Snapshots** -- point-in-time ranking snapshots for tracking changes
+- **Digest Emails** -- daily email digests via Resend
+- **System Health** -- dashboard with infrastructure checks, scoring sanity checks, data connector health, and E2E tests
+- **Compare Tool** -- side-by-side chef comparison
+
+## Prerequisites
+
+- Node.js 18+
+- npm
+
+## Setup
+
+### 1. Clone and install
+
+```bash
+git clone https://github.com/s10124212/chef-ranker.git
+cd chef-ranker
+npm install
+```
+
+### 2. Create `.env`
+
+```
+DATABASE_URL="file:./dev.db"
+ANTHROPIC_API_KEY=your-anthropic-api-key
+RESEND_API_KEY=your-resend-api-key
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+```
+
+- **ANTHROPIC_API_KEY** -- required for AI outreach drafts, news AI extraction, and Michelin scraper fallback. Get one at https://console.anthropic.com
+- **RESEND_API_KEY** -- required for digest emails. Get one at https://resend.com. Optional if you don't need email.
+
+### 3. Set up the database
+
+```bash
+npx prisma generate
+npx prisma migrate dev
+```
+
+### 4. Seed initial data
+
+```bash
+npm run db:seed
+```
+
+This loads 53 chefs from `data/chefs-manual.json` with their accolades, career entries, public signals, and peer standings.
+
+### 5. Start the dev server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Pages
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Path | Description |
+|------|-------------|
+| `/` | Leaderboard with rankings and recent news |
+| `/chefs` | Browse all chefs |
+| `/chefs/[slug]` | Chef detail page with score breakdown |
+| `/news` | News feed with taste-relevance filtering |
+| `/compare` | Side-by-side chef comparison |
+| `/outreach` | AI-generated outreach drafts |
+| `/update` | Run data collection, news refresh, score recalculation, snapshot publishing |
+| `/health` | System health dashboard, checks, and test log |
+| `/archive` | Monthly ranking snapshots |
+| `/settings` | Scoring weights, sender info, digest settings |
 
-## Learn More
+## Scoring
 
-To learn more about Next.js, take a look at the following resources:
+Each chef is scored 0-100 across four categories (default weights):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Category | Weight | Data Sources |
+|----------|--------|-------------|
+| Formal Accolades | 35% | Michelin scraper, James Beard scraper, World's 50 Best scraper, News AI Extractor, manual |
+| Career Track | 25% | News AI Extractor, manual |
+| Public Signals | 15% | Instagram scraper, News AI Extractor, manual |
+| Peer Standing | 25% | News AI Extractor, manual |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Scoring uses a **trailing 10-year window** -- only data from the last 10 years counts toward the score. Weights are configurable in Settings.
 
-## Deploy on Vercel
+## Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Production build |
+| `npm run db:seed` | Import chefs from `data/chefs-manual.json` |
+| `npm run db:reset` | Reset database and re-run migrations |
+| `npx tsx scripts/collect-data.ts` | Run all data collectors |
+| `npx tsx scripts/collect-news.ts` | Fetch news from Google News RSS |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tech Stack
+
+- **Framework**: Next.js 16 (App Router, Turbopack)
+- **Database**: SQLite via Prisma ORM
+- **UI**: shadcn/ui, Tailwind CSS, Lucide icons
+- **AI**: Anthropic Claude (outreach generation, news extraction)
+- **Email**: Resend
+- **Data Collection**: Cheerio (web scraping), Axios
