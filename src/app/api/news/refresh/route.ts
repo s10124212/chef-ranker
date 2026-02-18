@@ -162,6 +162,11 @@ export async function POST() {
         const category = categorize(title);
         const publishedAt = pubDate ? new Date(pubDate) : new Date();
 
+        // Skip articles older than 10 years
+        const tenYearsAgo = new Date();
+        tenYearsAgo.setFullYear(tenYearsAgo.getFullYear() - 10);
+        if (publishedAt < tenYearsAgo) return;
+
         // Tag taste relevance (never discard)
         const taste = evaluateTasteRelevance(title, summary, sourceName);
 

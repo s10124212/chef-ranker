@@ -1,5 +1,4 @@
 import crypto from "crypto";
-import Anthropic from "@anthropic-ai/sdk";
 import { Resend } from "resend";
 import { prisma } from "@/lib/db";
 
@@ -71,6 +70,13 @@ export async function generateDigestContent(): Promise<DigestContent | null> {
     return null;
   }
 
+  const today = new Date();
+  const dateStr = today.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+
   // Fetch ranking changes from this week
   const oneWeekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
   const recentSnapshots = await prisma.snapshotEntry.findMany({
@@ -109,92 +115,31 @@ export async function generateDigestContent(): Promise<DigestContent | null> {
       : a.type,
   }));
 
-  // Use Anthropic to curate and summarize
-  const anthropic = new Anthropic();
+  // Rank by category priority: awards > job changes > restaurant > features > other
+  const categoryPriority: Record<string, number> = {
+    AWARD: 1, JOB_CHANGE: 2, RESTAURANT: 3, COOKBOOK: 4, TV_MEDIA: 5,
+    FEATURE: 6, INTERVIEW: 7, EVENT: 8, OTHER: 9,
+  };
 
-  const newsPayload = newsItems.map((item) => ({
+  const sorted = [...newsItems].sort((a, b) => {
+    const pa = categoryPriority[a.category] ?? 99;
+    const pb = categoryPriority[b.category] ?? 99;
+    if (pa !== pb) return pa - pb;
+    return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
+  });
+
+  const stories: DigestStory[] = sorted.slice(0, 10).map((item) => ({
     title: item.title,
     url: item.url,
     source: item.source,
     category: item.category,
-    summary: item.summary || null,
-    chefs: item.chefs.map((c) => c.chef.name),
+    chefNames: item.chefs.map((c) => c.chef.name),
+    summary: item.summary || "Read more at the link.",
   }));
 
-  const response = await anthropic.messages.create({
-    model: "claude-sonnet-4-5-20250929",
-    max_tokens: 2048,
-    messages: [
-      {
-        role: "user",
-        content: `You are a culinary news editor. Given these news items from the last 24 hours, curate a daily digest.
-
-NEWS ITEMS:
-${JSON.stringify(newsPayload, null, 2)}
-
-Instructions:
-1. Select the top 10 most newsworthy items (or all if fewer than 10).
-2. Rank by importance: awards > restaurant openings > features > routine news.
-3. For any item missing a summary, write a 2-3 sentence summary.
-4. If there's a common theme across the stories, generate a brief intro line (1 sentence). Otherwise set intro to an empty string.
-
-Return ONLY valid JSON — no markdown, no comments, no trailing commas. Escape any special characters in strings. Use this exact format:
-{"intro":"string or empty","stories":[{"title":"string","url":"string","source":"string","category":"string","chefNames":["string"],"summary":"string"}]}`,
-      },
-    ],
-  });
-
-  const textBlock = response.content.find((block) => block.type === "text");
-  if (!textBlock || textBlock.type !== "text") {
-    throw new Error("No text response from Anthropic");
-  }
-
-  let parsed: { intro: string; stories: DigestStory[] };
-  const rawText = textBlock.text.trim();
-
-  function extractAndParse(text: string): { intro: string; stories: DigestStory[] } {
-    // Strip markdown code fences if present
-    let clean = text.replace(/```(?:json)?\s*/g, "").replace(/```/g, "").trim();
-    // Find the JSON object
-    const jsonStart = clean.indexOf("{");
-    const jsonEnd = clean.lastIndexOf("}");
-    if (jsonStart === -1 || jsonEnd <= jsonStart) {
-      throw new Error("No JSON object found in response");
-    }
-    clean = clean.slice(jsonStart, jsonEnd + 1);
-    // Fix common JSON issues: trailing commas
-    clean = clean.replace(/,\s*([}\]])/g, "$1");
-    return JSON.parse(clean);
-  }
-
-  try {
-    parsed = extractAndParse(rawText);
-  } catch (parseErr) {
-    // Fallback: ask the model again with a simpler prompt using just the raw news
-    console.error("JSON parse failed, building digest from raw data");
-    parsed = {
-      intro: "",
-      stories: newsItems.slice(0, 10).map((item) => ({
-        title: item.title,
-        url: item.url,
-        source: item.source,
-        category: item.category,
-        chefNames: item.chefs.map((c) => c.chef.name),
-        summary: item.summary || "Read more at the link.",
-      })),
-    };
-  }
-
-  const today = new Date();
-  const dateStr = today.toLocaleDateString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  });
-
   return {
-    intro: parsed.intro,
-    stories: parsed.stories,
+    intro: "",
+    stories,
     rankingMoves,
     accoladeAlerts,
     date: dateStr,
@@ -451,7 +396,7 @@ export async function sendDailyDigest(testEmail?: string): Promise<{
   }
 
   const resend = new Resend(process.env.RESEND_API_KEY);
-  const fromEmail = settings?.fromEmail || "digest@chefranker.com";
+  const fromEmail = settings?.fromEmail || "onboarding@resend.dev";
   const fromName = settings?.fromName || "Chef Ranker";
   const plainText = buildPlainText(content);
 

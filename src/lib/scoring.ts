@@ -31,45 +31,67 @@ function scoreAccoladeType(accolades: { type: string }[], type: string, maxScore
 }
 
 export function calculateBreakdown(chef: {
-  accolades: { type: string; detail: string | null; year: number | null }[];
-  careerEntries: { isCurrent: boolean; startYear: number | null; endYear: number | null; role: string }[];
-  publicSignals: { platform: string; value: number | null }[];
-  peerStandings: { type: string }[];
+  accolades: { type: string; detail: string | null; year: number | null; createdAt: Date }[];
+  careerEntries: { isCurrent: boolean; startYear: number | null; endYear: number | null; role: string; createdAt: Date }[];
+  publicSignals: { platform: string; value: number | null; createdAt: Date }[];
+  peerStandings: { type: string; createdAt: Date }[];
   yearsExperience: number | null;
 }): ScoreBreakdown {
+  // 10-year rolling window
+  const cutoffYear = new Date().getFullYear() - 10;
+  const cutoffDate = new Date();
+  cutoffDate.setFullYear(cutoffDate.getFullYear() - 10);
+
+  // Filter accolades: use year field if set, otherwise fall back to createdAt
+  const recentAccolades = chef.accolades.filter((a) =>
+    a.year ? a.year >= cutoffYear : a.createdAt >= cutoffDate
+  );
+
+  // Filter career entries: include if current, or if startYear/endYear is within window, or createdAt is recent
+  const recentCareer = chef.careerEntries.filter((c) =>
+    c.isCurrent ||
+    (c.startYear && c.startYear >= cutoffYear) ||
+    (c.endYear && c.endYear >= cutoffYear) ||
+    c.createdAt >= cutoffDate
+  );
+
+  // Filter public signals and peer standings by createdAt
+  const recentSignals = chef.publicSignals.filter((s) => s.createdAt >= cutoffDate);
+  const recentPeers = chef.peerStandings.filter((p) => p.createdAt >= cutoffDate);
+
   // Formal Accolades (raw 0-100)
-  const michelinScore = scoreMichelinStars(chef.accolades);
-  const jbScore = scoreAccoladeType(chef.accolades, "JAMES_BEARD", 80);
-  const w50Score = scoreAccoladeType(chef.accolades, "WORLDS_50_BEST", 90);
-  const bocuseScore = scoreAccoladeType(chef.accolades, "BOCUSE_DOR", 85);
-  const otherAccoladeScore = scoreAccoladeType(chef.accolades, "OTHER", 30);
+  const michelinScore = scoreMichelinStars(recentAccolades);
+  const jbScore = scoreAccoladeType(recentAccolades, "JAMES_BEARD", 80);
+  const w50Score = scoreAccoladeType(recentAccolades, "WORLDS_50_BEST", 90);
+  const bocuseScore = scoreAccoladeType(recentAccolades, "BOCUSE_DOR", 85);
+  const otherAccoladeScore = scoreAccoladeType(recentAccolades, "OTHER", 30);
   const formalAccolades = Math.min(100, Math.max(michelinScore, jbScore, w50Score, bocuseScore) +
-    (chef.accolades.length > 1 ? Math.min(20, (chef.accolades.length - 1) * 5) : 0) +
+    (recentAccolades.length > 1 ? Math.min(20, (recentAccolades.length - 1) * 5) : 0) +
     otherAccoladeScore * 0.3);
 
   // Career Track Record (raw 0-100)
   const years = chef.yearsExperience || 0;
   const yearScore = Math.min(40, years * 2);
-  const positionCount = chef.careerEntries.length;
+  const positionCount = recentCareer.length;
   const positionScore = Math.min(30, positionCount * 6);
-  const hasExecRole = chef.careerEntries.some((c) =>
+  const hasExecRole = recentCareer.some((c) =>
     /chef.*owner|executive|head chef|chef de cuisine/i.test(c.role)
   );
   const roleScore = hasExecRole ? 30 : 15;
   const careerTrack = Math.min(100, yearScore + positionScore + roleScore);
 
   // Public Signals (raw 0-100)
-  const signalCount = chef.publicSignals.length;
-  const totalSignalValue = chef.publicSignals.reduce((sum, s) => sum + (s.value || 0), 0);
+  const signalCount = recentSignals.length;
+  const totalSignalValue = recentSignals.reduce((sum, s) => sum + (s.value || 0), 0);
   const publicSignals = Math.min(100,
     signalCount * 15 + Math.min(50, totalSignalValue / 10000)
   );
 
   // Peer Standing (raw 0-100)
-  const peerCount = chef.peerStandings.length;
-  const mentored = chef.peerStandings.filter((p) => p.type === "MENTORED").length;
-  const collabs = chef.peerStandings.filter((p) => p.type === "COLLABORATION").length;
-  const endorsements = chef.peerStandings.filter((p) => p.type === "ENDORSEMENT").length;
+  const peerCount = recentPeers.length;
+  const mentored = recentPeers.filter((p) => p.type === "MENTORED").length;
+  const collabs = recentPeers.filter((p) => p.type === "COLLABORATION").length;
+  const endorsements = recentPeers.filter((p) => p.type === "ENDORSEMENT").length;
   const peerStanding = Math.min(100,
     peerCount * 10 + mentored * 15 + collabs * 10 + endorsements * 12
   );

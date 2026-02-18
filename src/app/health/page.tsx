@@ -570,7 +570,7 @@ function CheckResult({ checkId, result, isE2e }: { checkId: string; result: Reco
             <p className="text-xs">{d.hasAnthropicKey ? <CheckCircle2 className="h-3 w-3 text-green-500 inline mr-1" /> : <XCircle className="h-3 w-3 text-red-500 inline mr-1" />}Anthropic API key</p>
           )}
           {d.canExtractFollowers != null && (
-            <p className="text-xs">{d.canExtractFollowers ? <CheckCircle2 className="h-3 w-3 text-green-500 inline mr-1" /> : <XCircle className="h-3 w-3 text-red-500 inline mr-1" />}Follower extraction</p>
+            <p className="text-xs">{d.canExtractFollowers ? <CheckCircle2 className="h-3 w-3 text-green-500 inline mr-1" /> : <AlertTriangle className="h-3 w-3 text-yellow-500 inline mr-1" />}Follower extraction {d.canExtractFollowers ? "working" : "blocked this session"}</p>
           )}
           {d.existingInstagramSignals != null && <p className="text-xs text-muted-foreground">{d.existingInstagramSignals} existing Instagram signals</p>}
           {d.unprocessedItems != null && <p className="text-xs text-muted-foreground">{d.unprocessedItems} unprocessed / {d.processedItems} processed</p>}

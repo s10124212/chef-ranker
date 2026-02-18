@@ -4,7 +4,7 @@ import { prisma } from "@/lib/db";
 export async function GET() {
   const settings = await prisma.digestSettings.findFirst();
   return NextResponse.json(settings || {
-    fromEmail: "digest@chefranker.com",
+    fromEmail: "onboarding@resend.dev",
     fromName: "Chef Ranker",
     sendHour: 8,
     sendMinute: 0,

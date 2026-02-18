@@ -36,7 +36,7 @@ export default function SettingsPage() {
   const [outreach, setOutreach] = useState({ purpose: "", tone: "warm", maxWords: 150 });
   const [savingOutreach, setSavingOutreach] = useState(false);
   const [apiKey, setApiKey] = useState("");
-  const [digest, setDigest] = useState({ fromEmail: "digest@chefranker.com", fromName: "Chef Ranker", sendHour: 8, sendMinute: 0, timezone: "America/New_York" });
+  const [digest, setDigest] = useState({ fromEmail: "onboarding@resend.dev", fromName: "Chef Ranker", sendHour: 8, sendMinute: 0, timezone: "America/New_York" });
   const [savingDigest, setSavingDigest] = useState(false);
   const [subscribers, setSubscribers] = useState<{ email: string; isActive: boolean; subscribedAt: string }[]>([]);
   const [subCount, setSubCount] = useState({ active: 0, total: 0 });
@@ -65,7 +65,7 @@ export default function SettingsPage() {
       setSender({ name: snd.name || "", title: snd.title || "", company: snd.company || "", email: snd.email || "" });
       setOutreach({ purpose: os.purpose || "", tone: os.tone || "warm", maxWords: os.maxWords || 150 });
       setDigest({
-        fromEmail: ds.fromEmail || "digest@chefranker.com",
+        fromEmail: ds.fromEmail || "onboarding@resend.dev",
         fromName: ds.fromName || "Chef Ranker",
         sendHour: ds.sendHour ?? 8,
         sendMinute: ds.sendMinute ?? 0,
